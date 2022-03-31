@@ -2,7 +2,7 @@ PROG = hid_listen
 
 # Target OS (default Linux):
 # LINUX / FREEBSD / DARWIN / WINDOWS
-OS ?= LINUX
+OS ?= WINDOWS
 
 # Defaults
 TARGET ?= $(PROG)
@@ -24,9 +24,9 @@ endif
 LIBS = -framework IOKit -framework CoreFoundation
 else ifeq ($(OS), WINDOWS)
 TARGET = $(PROG).exe
-CC = i586-mingw32msvc-gcc
-STRIP = i586-mingw32msvc-strip
-WINDRES = i586-mingw32msvc-windres
+CC = i686-w64-mingw32-gcc
+STRIP = i686-w64-mingw32-strip
+WINDRES = i686-w64-mingw32-windres
 LIBS = -lhid -lsetupapi
 KEY_SPC = ~/bin/cert/mykey.spc
 KEY_PVK = ~/bin/cert/mykey.pvk

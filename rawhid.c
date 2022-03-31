@@ -488,8 +488,8 @@ int rawhid_write(rawhid_t *hid, const void *buf, int len, int timeout_ms)
 #define OPERATING_SYSTEM windows
 #include <windows.h>
 #include <setupapi.h>
-#include <ddk/hidsdi.h>
-#include <ddk/hidclass.h>
+#include <hidsdi.h>
+#include <hidclass.h>
 
 // http://msdn.microsoft.com/en-us/library/ms790932.aspx
 
