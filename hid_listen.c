@@ -31,7 +31,7 @@ static void delay_ms(unsigned int msec);
 
 int main(void)
 {
-	char buf[64], *in, *out;
+	char buf[65], *in, *out;
 	rawhid_t *hid;
 	int num, count;
 
